@@ -1,0 +1,109 @@
+/* Login.css */
+
+
+.login-container {
+  background-image: url('../../Images/back.jpg'); /* Thay 'link-to-your-image.jpg' bằng đường dẫn đến hình nền của bạn */
+  background-size: cover; /* Đảm bảo hình nền phủ hết phần tử */
+  background-position: center; /* Căn giữa hình nền */
+  height: 150vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-box {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(23px);
+  padding: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2{
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color:#1b60a0;
+  text-align: center;
+}
+.title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color:#1b60a0;
+  text-align: center;
+}
+
+.form-control {
+  background: transparent;
+  position: relative;
+  width: 400px;
+  height: 50px;
+  border-bottom: 2px solid #1b60a0;
+  margin: 20px 0px 10px 0px;
+  color: #1b60a0;
+  font-size: medium;
+}
+.forgot{
+  font-weight: 500;
+  color: #014e96;
+  font-size: small;
+  float: right;
+}
+
+
+.justify-button {
+  text-align: center;
+}
+
+.button {
+  margin: 1rem 0rem;
+  width: 100%;
+  padding: 10px;
+  background-color: #1b60a0;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block; /* This ensures that the button width is set to its content */
+}
+.error{
+  font-size: 12px;
+  color: red;
+}
+.Register  p{
+  font-size: 0.8rem;
+  color: #1f2021;
+  text-align: center;
+  font-weight: 500;
+  margin: 1px 0 0px 10px;
+}
+.register-link{
+  color: #014e96;
+}
+.resetbuton{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.loginbtn{
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #7e8080;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.submitbtn{
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #1b60a0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+}

@@ -1,0 +1,128 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    border:0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.container{
+    width: var(--container-width-lg);
+    max-width: 1920px;
+    margin-inline:auto;
+}
+:root {
+    --container-width-lg:80%;
+    --container-width-md:90%;
+    --transition: all 500ms ease;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    line-height: 1.7;
+    overflow-x: hidden;
+
+}
+
+h1, h2,h3,h4,h5{
+    line-height: 1.2;
+    color: #002f6c;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+a{
+    color: #17181a;;
+}
+img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+
+/* CSS */
+.login_button{
+ width: fit-content;
+ border-radius: 10px;
+ font-size: 1rem;
+ background: #388EFF;
+box-shadow: 2px 2px 24px 0px rgba(78, 104, 236, 0.212);
+transition: var(--transition);
+color: #fff; 
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.login_button:hover,
+.login_button:focus {
+    background: #1b60a0;
+    box-shadow: 4px 4px 24px 0px rgba(3, 36, 202, 0.212);
+}
+
+.login_button:hover {
+  transform: translateY(-2px);
+}
+
+.login_button:active {
+  transform: translateY(2);
+}
+.Startlearning_button{
+    width: fit-content;
+   display: block;
+   padding: 0.9rem;
+    border-radius: 10px;
+    background:  #0e3ecd;
+   box-shadow: 2px 2px 24px 0px rgba(78, 104, 236, 0.212);
+   transition: var(--transition);
+   color: #fff; 
+     cursor: pointer;
+   }
+   
+   .Startlearning_button,
+   .Startlearning_button:focus {
+       box-shadow: 4px 4px 24px 0px rgba(3, 36, 202, 0.212);
+   }
+   
+   .Startlearning_button:hover {
+     transform: translateY(-2px);
+     box-shadow: 4px 4px 24px 0px rgba(232, 14, 134, 0.212);
+     background: #da2f8a;
+   }
+   
+   .Startlearning_button:active {
+     transform: translateY(2);
+   }
+
+   .Learning_button{
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    background:  #388EFF;
+   color: #fff; 
+     cursor: pointer;
+     display: inline-flex;
+     justify-content: center;
+     padding: calc(.75rem - 2px) calc(0.8rem - 0.8px);
+     position: relative;
+     user-select: none;
+     touch-action: manipulation;
+     vertical-align: baseline;
+   }

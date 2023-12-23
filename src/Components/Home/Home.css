@@ -1,0 +1,379 @@
+.main_header{
+    width: 100vw;
+    height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+}
+.main_header-container{
+    height:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.main_header-left{
+    margin-top: 4rem;
+}
+.main_header-left h4{
+    margin-bottom: 1rem;
+    color: #0e3ecd;
+    font-weight: 500;
+}
+.main_header h1{
+    color: #388EFF;
+}
+.main_header-left p {
+    margin:  1rem 0 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #646363;
+}
+.main_header-right {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.infor{
+        width: 100vw;
+        height: calc(100vh - 2rem);
+        display: grid;
+}
+.infor-container{
+    height:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.infor-right{
+    margin-top: 3rem;
+    display: grid;
+}
+
+.infor-right h1{
+    color: #0e3ecd;
+    margin-bottom: 1rem;
+}
+.infor-right p {
+    margin:  1rem 0 1rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #646363;
+}
+
+.infor-right li {
+    font-size: 15px; /* Set font size for li */
+    line-height: 2.5rem; /* Set line height for better spacing */
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Center vertically */
+    float : left;
+    color: #486284;
+    font-weight: 500;
+    margin-right: 1rem;
+    
+}
+
+.infor-right li::before {
+    content: ''; /* Empty content for a pseudo-element */
+    background-image: url("../../Images/checkicon.png");
+    background-size: cover; /* Adjust background size to cover the container */
+    margin-right: 4px; /* Adjust spacing between icon and text */
+    width: 16px; /* Set width of the container */
+    height: 16px; /* Set height of the container */
+}
+.Startlearning_button{
+  margin-top: 1rem;
+}
+/*-----------------------------------------------------Course-------------*/
+.courses h1 {
+  color: #388EFF;
+  text-align: center;
+}
+
+.courses {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.courses_wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to next line */
+  overflow-x: auto;
+  padding: 2rem 0rem 2rem 1.1rem;
+}
+.courses_wrapper::-webkit-scrollbar {
+  width: 15px;
+}
+.courses_course {
+  background: #fff;
+  border-radius: 8px;
+  width: 300px;
+  margin-right: 30px; /* Adjust the margin between cards */
+  box-shadow: 8px 8px 12px 8px rgba(78, 80, 98, 0.08);
+  text-align: left;
+  
+}
+.courses_course:hover {
+  transform: scale(1.1); /* Add a scaling effect on hover */
+  transition: var(--transition);
+}
+ 
+.card {
+  padding: 10px;
+  border-radius: 14px;
+  text-align: left;
+  
+}
+
+.card span {
+  font-size: 0.8rem;
+  place-items: center;
+  color: #646363;
+  padding-right: 10px;
+}
+
+.card span svg {  
+  font-size: 20px;
+  vertical-align: middle; 
+  padding: 0px 3px 1.5px 0px;
+}
+
+.star-icon svg {
+  margin-top: 1rem;
+  justify-content: left;
+  color: #ff9800;
+}
+.courses_course p{
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #4D4D4D;
+  line-height: 160%;
+  min-height: 80px; /* Độ cao tối thiểu */
+max-height: 120px; /* Độ cao tối đa */
+overflow: hidden;
+}
+.courses_course h4 {
+  color: #486284;
+  /* Remove top margin for consistency */
+}
+.empty{
+  margin-top: 0.5rem;
+  color: #FFF;
+  font-size: 1px;
+  border-bottom: 1px dashed #ADA5A5;
+}
+.Learning_button{
+  margin-top: 1rem;
+}
+.course-image {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 280px ;
+  height: 150px;
+ 
+}
+.courses big{
+padding-left: 130px ;
+color: red;
+font-weight: 550;
+}
+.Explore{
+  width: fit-content;
+  border-radius: 10px;
+  background: #388EFF;
+ box-shadow: 2px 2px 24px 0px rgba(78, 104, 236, 0.212);
+ transition: var(--transition);
+ color: #fff; 
+   cursor: pointer;
+   display: inline-flex;
+   justify-content: center;
+   min-height: 3rem;
+   padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+   position: relative;
+   transition: all 250ms;
+   margin-bottom: 6rem;
+ }
+ 
+ .Explore,
+ .Explore:focus {
+     box-shadow: 4px 4px 24px 0px rgba(3, 36, 202, 0.212);
+ }
+ 
+ .Explore:hover {
+   transform: translateY(-2px);
+   box-shadow: 4px 4px 24px 0px rgba(47, 14, 232, 0.267);
+   background: #1b60a0;
+   
+ }
+ .Explore:active {
+   transform: translateY(2);
+ }
+
+   /*====================testimonal===========*/
+  
+   .testimonials h1{
+    color: #0e3ecd;
+    padding-top: 6rem;
+    padding-bottom:3rem ;
+   }
+   /* Add this CSS to your existing styles or create a new CSS file */
+.testimonials {
+  text-align: center;
+}
+
+.testimonial_container {
+ margin-bottom: 6rem;
+}
+
+.testimonial_wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 20px; /* Add padding for better appearance */
+  overflow-x: auto;
+}
+.testimonial_wrapper::-webkit-scrollbar {
+  width: 50px;
+}
+.testimonial {
+  flex: 0 0 auto; /* Ensure the cards don't grow to fill the container */
+  width: 466px; /* Set a fixed width for each testimonial card */
+  margin-right: 20px; /* Add some spacing between testimonial cards */
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column; 
+  text-align: left;
+  padding: 20px;
+}
+
+.testimonial_quote {
+  font-style: italic;
+  flex: 1; /* Allow the quote to grow and take up remaining space */
+  margin-bottom: 10px; /* Add some spacing at the bottom of the quote */
+  overflow: auto; /* Enable vertical scrolling if the quote is too long */
+}
+
+.testimonial_icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial_avatar {
+  display: flex;
+  align-items: center;
+  
+}
+
+.testimonial_avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+.testimonial_info {
+  display: block;
+}
+
+.testimonial_info strong {
+  margin-bottom: 1px; /* Add spacing between strong and small */
+}
+.testimonial_info small{
+  display: block;
+  color: #4D4D4D;
+}
+
+/*===================footer===========*/
+/* Footer.css */
+
+footer {
+  margin-top: 7rem;
+  background-color: #0C2945;
+  color: #fff; /* Set text color to white */
+  padding:60px 0;
+  font-size: 0.9rem;
+}
+
+.container {
+  align-items: center;
+  
+}
+.logofooter {
+  margin-bottom: 1rem;
+  justify-content: center; 
+}
+.logofooter img {
+  max-width: 15%; /* Ensure the logo does not exceed its container's width */
+  height: auto; /* Maintain the aspect ratio */
+  text-align: center;
+}
+.sub{
+color: #B2B3CF;
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.8px;
+margin-bottom: 1rem;
+}
+
+.emailinput {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.emailinput input {
+  border-radius: 60px 0px 0 60px; 
+  padding: 24px;
+  width: 450px;
+}
+
+.emailinput button {
+  color: #fff;
+  height: 64px;
+  width: 190px;
+  border-radius: 60px 60px 60px 60px; /* Round only the bottom corners */
+  border: 6px solid #ffffff;
+  background: linear-gradient(106deg, #388EFF 19.57%, #2782FA 78.85%);
+  cursor: pointer;
+  margin-left: -40px; 
+}
+
+.content ul {
+  content: "|";
+  list-style: none;
+  padding: 0.5rem;
+  display: flex; /* Make the list items display horizontally */
+  justify-content: center; /* Center the list items */
+}
+
+.content li a{
+  color: #B2B3CF;
+  font-size: small;
+}
+.content li:not(:last-child)::after {
+  content: "|";
+  margin: 0 8px;
+  color: #B2B3CF;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: #B2B3CF;
+  font-size: x-small;
+}
+@media screen and (max-width: 1024px) {
+  .emailinput input{
+   width: 250px;
+  }
+}
