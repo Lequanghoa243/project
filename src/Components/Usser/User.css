@@ -43,24 +43,31 @@
 }
   .userinfor{
     flex:1;
-    
+    font-size: 14px;
     width: 350px;
-    margin-top: 2rem;
+    margin-top: 1rem;
     border: 1px solid rgb(184, 184, 184);
     padding: 20px;
   border-radius: 12px;
   }
   .usercourseinfo{
     flex:2;
-    margin-top: 2rem;
+  }
+  .usercourselist{
+    margin-top: 1rem;
+    padding: 15px;
+     max-width: 600px;
+     border-radius: 20px;
     border: 1px solid rgb(184, 184, 184);
-    padding: 20px;
-   max-width: 600px;
-   display: flex;
-  flex-direction: row; 
-  border-radius: 20px;
+    flex-direction: row; 
+    display: flex;
+  }
+  .course-item{
+    display: flex;
+    align-items: center;
   }
   .courseimg{
+    flex-shrink: 0;
     margin-right: 20px;
     width: 200px;
     height: 100px;
@@ -69,10 +76,7 @@
 
 .text-column {
     padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+    flex-grow: 1;
     h4{
         font-weight: 500;
     }

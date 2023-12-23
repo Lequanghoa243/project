@@ -52,9 +52,59 @@ nav{
     width: 100%; 
                      
 }
+
 .userbtn{
-    color: #2377ff;
-    font-size: 30px;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #388EFF;
+   box-shadow: 2px 2px 24px 0px rgba(78, 104, 236, 0.212);
+   transition: var(--transition);
+   color: #fff; 
+     min-height: 3.2rem;
+     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+     transition: all 250ms;
+}
+
+.dropdown-content {
+    border-radius: 10px;
+    position: absolute;
+    top: 100%; 
+    background-color: #fff; /* Customize as needed */
+    box-shadow: 2px 2px 24px 0px rgba(187, 188, 193, 0.212);
+    z-index: 1; 
+  }
+  .dropdown-content li {
+   
+    list-style: none;
+    padding: 15px 50px;
+    cursor: pointer;
+  }
+  
+.dropdown-content li:hover {
+    transition: var(--transition);
+    border-radius: 10px;
+    background-color: #1b60a0;
+    color: #fff;
+    .dropdown-item {
+        background-color: #1b60a0;
+        color: #fff;
+        transition: var(--transition);
+    }
+  }
+
+.iconuser{
+    font-size: medium;
+    margin-right:5px ;
+}
+.dropdown-item{
+    display: inline;
+    font-size: medium;
+    background: #ffffff;
+    color: #000000;
 }
   
   /* ... Your existing CSS ... */

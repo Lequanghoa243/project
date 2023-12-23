@@ -10,11 +10,11 @@ import { IoMdClose } from 'react-icons/io';
 import './Navbar.css';
 import { useSelector } from 'react-redux';
 
-
 const Navbar = () => {
   const authState = useSelector((state) => state.auth);
   const navigate = useNavigate();
   const [isNavShowing, setIsNavShowing] = useState(true);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { customer } = authState;
 
   const handleLogout = async () => {
@@ -25,6 +25,23 @@ const Navbar = () => {
         window.location.reload();
     
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        !event.target.closest('.userbtn') &&
+        !event.target.closest('.dropdown-content')
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav>
@@ -57,32 +74,27 @@ const Navbar = () => {
         </ul>
 
         {customer ? (
-          <div className="dropdown">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              <p>
-                <FaUserLarge /> {customer.firstname} {customer.lastname}
-              </p>
-            </button>
-            <div
-              className="dropdown-menu"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <Link to="/user" className="dropdown-item">
-                <p>Profile</p>
-              </Link>
-              <button className="dropdown-item" onClick={handleLogout}>
-                <p>Logout</p>
-              </button>
+        <div className='userdropmenu'>
+          <button
+            className="userbtn"
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          >
+            <p>
+              <FaUserLarge className='iconuser' /> {customer.firstname} {customer.lastname}
+            </p>
+          </button>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <li><a class="dropdown-item" href="/user">Profile</a></li>
+              <li>
+                <button className="dropdown-item" onClick={handleLogout}>
+              Logout  
+                </button>
+              </li>
             </div>
-          </div>
-        ) : (
+          )}
+        </div>
+      ) : (
           <Link to="/Login" className="login_button">
             <p>Login/Sign Up</p>
           </Link>

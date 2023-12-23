@@ -1,4 +1,4 @@
-export const base_url ="http://localhost:3000/"  
+export const base_url ="https://back-end-project-vpbd.onrender.com/"  
 
 const getTokenFromLocalStorage = localStorage.getItem("customer")
   ? JSON.parse(localStorage.getItem("customer"))

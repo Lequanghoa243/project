@@ -56,13 +56,18 @@ const User = () => {
             <h2>Your Courses</h2>
             <div className="usercourseinfo">
               {user.map((course) => (
-                <Link to={`/courses/${course._id}`} key={course._id}>
-                  <img src={course.images[0].url} alt='imgcourse' className="courseimg" />
-                  <div className="text-column">
-                    <h4>{course.title}</h4>
-                    <p>{course.description}</p>
-                  </div>
-                </Link>
+               <li className='usercourselist'>
+               <Link to={`/courses/${course._id}`} key={course._id}>
+                 <div className="course-item">
+                   <img src={course.images[0].url} alt='imgcourse' className="courseimg" />
+                   <div className="text-column">
+                     <h4>{course.title}</h4>
+                     <p>{course.description}</p>
+                   </div>
+                 </div>
+               </Link>
+             </li>
+             
               ))}
             </div>
           </div>
