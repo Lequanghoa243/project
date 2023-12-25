@@ -36,7 +36,6 @@ const App = () => {
         <Route path='Signup' element={<OpenRoute><Signup /></OpenRoute>} />
         <Route path='forgot-password' element={<OpenRoute><Forgotpassword /></OpenRoute>} />
         <Route path='Resetpassword' element={<OpenRoute><Resetpassword/></OpenRoute>} />
-        <Route path='courses/UI-UX' element={<UIUX />} />
         <Route path='courses/:id' element={<Single />} />
         <Route path='lesson/:id' element={<PrivateRoute><Watchpage /></PrivateRoute>} />
         <Route path='user' element={<PrivateRoute><User /></PrivateRoute>}/>

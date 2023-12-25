@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup'
 import "./Login.css"
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { registerUser } from '../../Feature/user/userSlice';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const signupSchema = yup.object({
   firstname: yup.string().required("First name is required"),
@@ -16,6 +17,7 @@ const signupSchema = yup.object({
 
 
 const Signup = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
@@ -28,8 +30,14 @@ const Signup = () => {
     validationSchema:signupSchema,
     onSubmit: (values) => {
       dispatch(registerUser(values));
+      formik.resetForm();
+      toast.info("User Created Successfully");
     },
   });
+
+
+      
+ 
   return (
 <>
 <div className="login-container">

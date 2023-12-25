@@ -34,10 +34,12 @@ const Login = () => {
   useEffect(() => {
     if (isSuccess && !refreshed) {
       navigate("/");
-      // Set a flag in local storage to indicate that the page has been refreshed
       localStorage.setItem('pageRefreshed', 'true');
       setRefreshed(true);
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+      
     }
   }, [isSuccess, navigate, refreshed]);
   return (
